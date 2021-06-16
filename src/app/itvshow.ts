@@ -1,6 +1,6 @@
 
 export interface Itvshow {
-  
+
   ShowName: string,
   Description: string,
   Language: String,
@@ -13,5 +13,5 @@ export interface Itvshow {
   Cast: string,
   Genre: string,
   Season: string
-
+  
 }
