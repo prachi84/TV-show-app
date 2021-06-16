@@ -1,15 +1,17 @@
 
 export interface Itvshow {
-  name: string,
-  description: string,
-  language: String,
-  network: string,
-  rating: string,
-  schedule: Date,
-  runtime: number, 
-  country: string,
-  image: string
-
-
+  
+  ShowName: string,
+  Description: string,
+  Language: String,
+  Network: string,
+  Rating: string,
+  Schedule: Date,
+  Runtime: number, 
+  Country: string,
+  Image: string,
+  Cast: string,
+  Genre: string,
+  Season: string
 
 }
