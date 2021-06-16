@@ -13,5 +13,6 @@ export interface Itvshow {
   Cast: string,
   Genre: string,
   Season: string
+
   
 }
