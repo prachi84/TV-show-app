@@ -1,7 +1,7 @@
 
 export interface Itvshow {
 
-  name: string,
+  show_name: string,
   genres: string,
   language: string,
   runtime: number, 
