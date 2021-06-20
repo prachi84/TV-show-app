@@ -13,9 +13,10 @@ export class TvshowService {
   getTVContainer(show_name: string) {
     return this.httpClient
       .get<Itvshowdata>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`)
-      .pipe();
-  } 
-
+      .pipe(
+        map(data => this.transformToItvshow(data))
+      )
+      }
   private transformToTVShow(data:Itvshowdata):Itvshow {
     return {
       show_name:data.show.name,
