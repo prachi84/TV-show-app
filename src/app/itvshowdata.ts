@@ -1,29 +1,28 @@
 export interface Itvshowdata {
-  show:[{
+  show:{
     name:string,
     language:string
-  }],
-  genres:{
-    0:string,
-    1:string,
-    2:string,
-    runtime:Number,
-    premiered:Date
-},
-schedule:{
-  time:number,
-}
-rating:{
-  average:number
-},
-network:{
-  name:string
-},
-country:{
-  name:string
-},
-image	:string,
-summary:string,
-
-
+    genres:string[],
+    runtime:number,
+    premiered:Date,
+    schedule:{
+      time:string,
+      days:string[]
+    },
+    rating:{
+      average:number
+    },
+    network:{
+      name:string,
+      country:{
+        name:string
+      }
+    },
+    image:{
+      orginal:string
+    }
+    summary:string,
+    type:string,
+    status:string
+  },
 }
