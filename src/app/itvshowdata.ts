@@ -26,3 +26,4 @@ export interface Itvshowdata {
     status:string
   },
 }
+// I noticed that in the JSON show is actually just one big object that contains everything knowing that I updated this interface
