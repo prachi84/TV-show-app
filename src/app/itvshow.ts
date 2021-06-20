@@ -14,3 +14,4 @@ export interface Itvshow {
   type:string,
   status:string,
 }
+// I changed some of the types so they would match tvshowdata, i also added in type and status

@@ -14,7 +14,7 @@ export class TvshowService {
     return this.httpClient
       .get<Itvshowdata>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`)
       .pipe();
-  }
+  } 
 
   private transformToTVShow(data:Itvshowdata):Itvshow {
     return {
