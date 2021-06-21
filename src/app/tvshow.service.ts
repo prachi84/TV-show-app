@@ -17,7 +17,7 @@ export class TvshowService {
         map(data => this.transformToItvshow(data))
       )
       }
-  private transformToTVShow(data:Itvshowdata):Itvshow {
+  private transformToItvshow(data:Itvshowdata):Itvshow {
     return {
       show_name:data.show.name,
       genres:data.show.genres,
