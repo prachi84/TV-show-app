@@ -14,11 +14,13 @@ import {MatCardModule} from '@angular/material/card';
 import{MatFormFieldModule} from '@angular/material/form-field';
 import{MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { TvSearchComponent } from './tv-search/tv-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TVContainerComponent
+    TVContainerComponent,
+    TvSearchComponent
   ],
   imports: [
     BrowserModule,
