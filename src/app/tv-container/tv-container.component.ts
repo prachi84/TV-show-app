@@ -10,10 +10,22 @@ import { TvshowService } from '../tvshow.service';
 export class TVContainerComponent implements OnInit {
 
   current : Itvshow = {
-  show_name: '',
-  language: '',
-  type:'',
-  status:''
+  show_name: 'string',
+  language: 'string',
+  type:'string',
+  status:'string',
+  genres:'string'[],
+  runtime:'number',
+  premiered:'Date',
+  schedule_time:'Date',
+  rating_average: number,
+  network_name:'number',
+  network_country_name:'string',
+  image_original: 'string',
+  summary: 'string',
+
+
+
 
   }
   
