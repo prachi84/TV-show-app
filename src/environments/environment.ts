@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false, 
-  appId: 'dummy'
+  appId: ' ze6GV2G34uE6iJZFuEIiVaxBWALMX6Q1'
 };
 
 /*
