@@ -1,5 +1,6 @@
 <div class="container-fluid">
 <div *ngIf="current">
+  <h2>My Favorites</h2>
   <div class="show-content">
     <img [src]='current.image_original' style="float: left; margin-right: 15px;" />
     <div class="show-name">{{current.show_name}}</div>
@@ -11,7 +12,7 @@
   
 
 <div *ngIf="previous">
-<h1>Genres</h1>
+<h2>Genres</h2>
 <div class="show-content">
     <img [src]='previous.image_original' style="float: left; margin-right: 15px;" />
     <div class="show-name">{{previous.show_name}}</div>
