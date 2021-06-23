@@ -5,3 +5,35 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+* {
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+body{
+    background-color: #333333;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.search {
+    margin-top: 0;
+    float: right;
+  }
+  .mat-toolbar.mat-primary {
+    background: #000000;
+    color: #ffaa00;
+}
+.show-name { 
+    font-size: 2em;
+    line-height: normal;
+}
+.show-info { 
+    font-size: 1.2em;
+    line-height: normal;
+}
+.show-content {
+    margin: 15px;
+
+    height: 300px;
+    
+}

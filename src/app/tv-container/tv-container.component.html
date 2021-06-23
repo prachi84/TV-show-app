@@ -1,26 +1,23 @@
+<div class="container-fluid">
 <div *ngIf="current">
-  <div>
-    <span>{{current.show_name}}</span>
-    <div>{{current.genres}},{{current.runtime}}</div>
-    <div>{{current. premiered | date:'fullDate'}}</div>
-  </div>
-  <div>
-    <img [src]='current.image_original'/>
-  </div>
-  <span>
+  <div class="show-content">
+    <img [src]='current.image_original' style="float: left; margin-right: 15px;" />
+    <div class="show-name">{{current.show_name}}</div>
+    <div class="show-info">{{current.genres}} &#8212; {{current.runtime}} minutes &#8212; {{current.language}}</div>
+    <div>{{current. premiered | date:'fullDate'}}</div><br />
     {{current.summary}}
-  </span>
+  </div>
 </div>
+  
 
 <div *ngIf="previous">
 <h1>Genres</h1>
-  <span>
-    <div>{{previous.show_name}} </div>
-    <div>{{previous.genres}},{{previous.runtime}}</div>
-    <div>{{previous. premiered | date:'fullDate'}}</div>
-  </span>
- <img [src]='previous.image_original'/>
- <div>
+<div class="show-content">
+    <img [src]='previous.image_original' style="float: left; margin-right: 15px;" />
+    <div class="show-name">{{previous.show_name}}</div>
+    <div class="show-info">{{previous.genres}} &#8212; {{previous.runtime}} &#8212; {{previous.language}}</div>
+    <div>{{previous. premiered | date:'fullDate'}}</div><br />
     {{previous.summary}}
   </div>
-
+</div>
+</div>
