@@ -1,1 +1,26 @@
-<p>tv-container works!</p>
+<div *ngIf="current">
+  <div>
+    <span>{{current.show_name}}</span>
+    <div>{{current.genres}},{{current.runtime}}</div>
+    <div>{{current. premiered | date:'fullDate'}}</div>
+  </div>
+  <div>
+    <img [src]='current.image_original'/>
+  </div>
+  <span>
+    {{current.summary}}
+  </span>
+</div>
+
+<div *ngIf="previous">
+<h1>Genres</h1>
+  <span>
+    <div>{{previous.show_name}} </div>
+    <div>{{previous.genres}},{{previous.runtime}}</div>
+    <div>{{previous. premiered | date:'fullDate'}}</div>
+  </span>
+ <img [src]='previous.image_original'/>
+ <div>
+    {{previous.summary}}
+  </div>
+
