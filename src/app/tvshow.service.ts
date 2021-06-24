@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable, ɵsetCurrentInjector } from '@angular/core';
 import {Itvshowdata} from './itvshowdata';
-import {TvshowSearch} from './tvshow-search';
 import {environment} from 'src/environments/environment';
 import {Itvshow} from './itvshow';
 import {map} from 'rxjs/operators';
@@ -11,25 +10,45 @@ import {map} from 'rxjs/operators';
 })
 export class TvshowService {
   constructor(private httpClient: HttpClient) {}
-  getTVSearchResults(show_name:string) {
-    return this.httpClient.get<TvshowSearch['show']>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`).pipe(map(data => this.transformToItvshow(data))
+  getTVContainer(show_name: string) {
+    return this.httpClient
+      .get<Itvshowdata[]>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`
       )
-      }    
-  private transformToItvshow(data:TvshowSearch['show']):Itvshow {
-    return {
-      show_name:data.name,
-      genres:data.genres,
-      language:data.language,
-      runtime:data.runtime,
-      premiered:data.premiered,
-      schedule_time:data.schedule?.time,
-      rating_average:data.rating?.average,
-      network_name:data.network?.name,
-      network_country_name:data.network?.country.name,
-      image_original:data.image?.orginal,
-      summary:data.summary,
-      type:data.type,
-      status:data.status
+      .pipe(
+        map(data => this.transformToItvshow(data))
+      )
+      }
+  private transformToItvshow(data:Itvshowdata[]):Itvshow {
+        const myData = data[0];
+        myData.show.summary = myData.show.summary.replace("<p>", '');
+        myData.show.summary = myData.show.summary.replace("</p>", '');
+        return {
+        show_name:myData.show.name,
+        genres:myData.show.genres,
+        language:myData.show.language,
+        runtime:myData.show.runtime,
+        premiered:myData.show.premiered,
+        schedule_time:myData.show.schedule.time,
+        rating_average:myData.show.rating.average,
+        network_name:myData.show.network.name,
+        network_country_name:myData.show.network.country.name,
+        image_original:myData.show.image.medium,
+        summary:myData.show.summary,
+        type:myData.show.type,
+        status:myData.show.status
+      }
     }
-  }
-}
+    }
+
+
+
+// expected
+// data = {
+//   name: "string",
+//   ...
+// }
+
+/**
+ * actual 
+ * data = [{stuff}, {moreStuffSameSchema}]
+ */

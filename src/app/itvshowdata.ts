@@ -1,4 +1,5 @@
 export interface Itvshowdata {
+  show:{
     name:string,
     language:string
     genres:string[],
@@ -18,11 +19,11 @@ export interface Itvshowdata {
       }
     },
     image:{
-      orginal:string
-    },
+      medium:string
+    }
     summary:string,
     type:string,
     status:string
+  },
 }
-
 // I noticed that in the JSON show is actually just one big object that contains everything knowing that I updated this interface

@@ -8,27 +8,27 @@ import { TvshowService } from '../tvshow.service';
   styleUrls: ['./tv-container.component.css']
 })
 export class TVContainerComponent implements OnInit {
-
   current : Itvshow = {
-    show_name: " ",
-    genres: [" "],
-    language: " ",
+    show_name: '',
+    genres: [],
+    language: '',
     runtime: 0, 
     premiered: new Date(),
-    schedule_time: " ",
-    rating_average: 0 ,
-    network_name: " ",
-    network_country_name: " ",
-    image_original: " ",
-    summary: " ",
-    type:" ",
-    status:" ",
+    schedule_time: '',
+    rating_average: 0,
+    network_name: '',
+    network_country_name: '',
+    image_original: '',
+    summary: '',
+    type: '',
+    status: '',
  }
 
- constructor(private tvshowservice:TvshowService) { }
+ constructor(private tvshowService:TvshowService) { }
 
   ngOnInit(): void {
-   this.tvshowservice.getTVSearchResults("girls").subscribe(data => this.current = data)
+   this.tvshowService.getTVContainer('girls').
+   subscribe (data=> this.current = data)
   }
 
 }
