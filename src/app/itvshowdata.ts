@@ -19,7 +19,7 @@ export interface Itvshowdata {
       }
     },
     image:{
-      orginal:string
+      medium:string
     }
     summary:string,
     type:string,
