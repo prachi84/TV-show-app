@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import {Itvshowdata} from './itvshowdata';
+import {TvshowSearch} from './tvshow-search';
 import {environment} from 'src/environments/environment';
 import {Itvshow} from './itvshow';
 import {map} from 'rxjs/operators';
@@ -10,28 +11,25 @@ import {map} from 'rxjs/operators';
 })
 export class TvshowService {
   constructor(private httpClient: HttpClient) {}
-  getTVContainer(show_name: string) {
-    return this.httpClient
-      .get<Itvshowdata>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`)
-      .pipe(
-        map(data => this.transformToItvshow(data))
+  getTVSearchResults(show_name:string) {
+    return this.httpClient.get<TvshowSearch['show']>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`).pipe(map(data => this.transformToItvshow(data))
       )
-      }
-  private transformToItvshow(data:Itvshowdata):Itvshow {
+      }    
+  private transformToItvshow(data:TvshowSearch['show']):Itvshow {
     return {
-      show_name:data.show.name,
-      genres:data.show.genres,
-      language:data.show.language,
-      runtime:data.show.runtime,
-      premiered:data.show.premiered,
-      schedule_time:data.show.schedule.time,
-      rating_average:data.show.rating.average,
-      network_name:data.show.network.name,
-      network_country_name:data.show.network.country.name,
-      image_original:data.show.image.orginal,
-      summary:data.show.summary,
-      type:data.show.type,
-      status:data.show.status
+      show_name:data.name,
+      genres:data.genres,
+      language:data.language,
+      runtime:data.runtime,
+      premiered:data.premiered,
+      schedule_time:data.schedule?.time,
+      rating_average:data.rating?.average,
+      network_name:data.network?.name,
+      network_country_name:data.network?.country.name,
+      image_original:data.image?.orginal,
+      summary:data.summary,
+      type:data.type,
+      status:data.status
     }
   }
 }

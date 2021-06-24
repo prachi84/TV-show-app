@@ -15,12 +15,14 @@ import{MatFormFieldModule} from '@angular/material/form-field';
 import{MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TvSearchComponent } from './tv-search/tv-search.component';
+import { DramaGenreComponent } from './drama-genre/drama-genre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TVContainerComponent,
-    TvSearchComponent
+    TvSearchComponent,
+    DramaGenreComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,6 @@ import { TvSearchComponent } from './tv-search/tv-search.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule
-
   ],
   providers: [TvshowService],
   bootstrap: [AppComponent]

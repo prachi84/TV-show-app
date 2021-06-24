@@ -1,4 +1,3 @@
-
 export interface Itvshow {
   show_name: string,
   genres: string[],
