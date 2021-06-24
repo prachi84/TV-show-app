@@ -1,26 +1,15 @@
 <div class="container-fluid">
 <div *ngIf="current">
-  <h2>My Favorites</h2>
+  <h2>Results</h2>
   <div class="show-content">
     <img [src]='current.image_original' style="float: left; margin-right: 15px;" />
     <div class="show-name">{{current.show_name}}</div>
-    <div class="show-info">{{current.genres}} &#8212; {{current.runtime}} minutes &#8212; {{current.language}}</div>
-    <div>{{current. premiered | date:'fullDate'}}</div><br />
-    <div>
+    <div class="show-info">Genres: {{current.genres}}</div>
+    <div class="show-info"> Runtime: {{current.runtime}} minutes </div>
+    <div class="show-info"> Language: {{current.language}}</div>
+    <div class="show-info"> Premiere Date : {{current. premiered | date:'fullDate'}}</div><br/>
+     <div class="show-info">
       {{current.summary}}
     </div>
   </div>
-</div>
-  
-
-<div *ngIf="previous">
-<h2>Genres</h2>
-<div class="show-content">
-    <img [src]='previous.image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{previous.show_name}}</div>
-    <div class="show-info">{{previous.genres}} &#8212; {{previous.runtime}} &#8212; {{previous.language}}</div>
-    <div>{{previous. premiered | date:'fullDate'}}</div><br />
-    {{previous.summary}}
-  </div>
-</div>
 </div>

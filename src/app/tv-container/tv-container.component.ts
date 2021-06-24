@@ -8,7 +8,6 @@ import { TvshowService } from '../tvshow.service';
   styleUrls: ['./tv-container.component.css']
 })
 export class TVContainerComponent implements OnInit {
-
   current : Itvshow = {
     show_name: '',
     genres: [],
@@ -24,26 +23,12 @@ export class TVContainerComponent implements OnInit {
     type: '',
     status: '',
  }
-previous : Itvshow = {
-  show_name: "Good Girls",
-  genres: ["Drama"],
-  language: "English",
-  runtime: 60, 
-  premiered: new Date(),
-  schedule_time: "22:00",
-  rating_average: 7.4,
-  network_name: "NBC",
-  network_country_name: "United States",
-  image_original: "https://static.tvmaze.com/uploads/images/medium_portrait/297/744253.jpg",
-  summary: "Good Girls follows three \"good girl\" suburban wives and mothers who suddenly find themselves in desperate circumstances and decide to stop playing it safe, and risk everything to take their power back.",
-  type:"Scripted ",
-  status:"Running",
-}
+
  constructor(private tvshowService:TvshowService) { }
 
   ngOnInit(): void {
    this.tvshowService.getTVContainer('girls').
-   subscribe (data => this.current = data)
+   subscribe (data=> this.current = data)
   }
 
 }
