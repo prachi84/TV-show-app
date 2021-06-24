@@ -18,37 +18,26 @@ export class TvshowService {
         map(data => this.transformToItvshow(data))
       )
       }
-  private transformToItvshow(data:Itvshowdata[]):Itvshow {
-        const myData = data[0];
-        myData.show.summary = myData.show.summary.replace("<p>", '');
-        myData.show.summary = myData.show.summary.replace("</p>", '');
-        return {
-        show_name:myData.show.name,
-        genres:myData.show.genres,
-        language:myData.show.language,
-        runtime:myData.show.runtime,
-        premiered:myData.show.premiered,
-        schedule_time:myData.show.schedule.time,
-        rating_average:myData.show.rating.average,
-        network_name:myData.show.network.name,
-        network_country_name:myData.show.network.country.name,
-        image_original:myData.show.image.medium,
-        summary:myData.show.summary,
-        type:myData.show.type,
-        status:myData.show.status
+      private transformToItvshow(data:Itvshowdata[]):Itvshow[] {
+          var result : Itvshow[] = []
+          for (let i=0; i<data.length; i++){
+          const myData = data[i];
+            result[i] = {
+              show_name:myData.show.name,
+              genres:myData.show.genres,
+              language:myData.show.language,
+              runtime:myData.show.runtime,
+              premiered:myData.show.premiered,
+              schedule_time:myData.show.schedule.time,
+              rating_average:myData.show.rating.average,
+              network_name:myData.show.network==null?"":myData.show.network.name,
+              network_country_name:myData.show.network==null?"":myData.show.network.country.name,
+              image_original:myData.show.image==null?"":myData.show.image.medium,
+              summary:myData.show.summary,
+              type:myData.show.type,
+              status:myData.show.status
+            } 
+          }
+        return result;
+        }
       }
-    }
-    }
-
-
-
-// expected
-// data = {
-//   name: "string",
-//   ...
-// }
-
-/**
- * actual 
- * data = [{stuff}, {moreStuffSameSchema}]
- */

@@ -8,7 +8,7 @@ import { TvshowService } from '../tvshow.service';
   styleUrls: ['./tv-container.component.css']
 })
 export class TVContainerComponent implements OnInit {
-  current : Itvshow = {
+  current : Itvshow[] =[ {
     show_name: '',
     genres: [],
     language: '',
@@ -23,13 +23,15 @@ export class TVContainerComponent implements OnInit {
     type: '',
     status: '',
  }
+]
 
- constructor(private tvshowService:TvshowService) { }
-
-  ngOnInit(): void {
-   this.tvshowService.getTVContainer('girls').
-   subscribe (data=> this.current = data)
-  }
+ constructor(private tvshowservice:TvshowService) { }
+ ngOnInit(): void {
+   for (let i = 0; i < 10; i++) {
+    this.tvshowservice.getTVContainer('girls').
+    subscribe (data => this.current[i] = data[i])
+   }
+ }
 
 }
 /*created one more variable *//*I have created previous variable to add more components */
