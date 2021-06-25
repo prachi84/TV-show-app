@@ -18,6 +18,7 @@ import { TvSearchComponent } from './tv-search/tv-search.component';
 import { DramaGenreComponent } from './drama-genre/drama-genre.component';
 import {RemovesymbolsService} from './removesymbols.service';
 import {specialPipe} from './removesymbols.service';
+import {GenreService} from './genre.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import {specialPipe} from './removesymbols.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [TvshowService,RemovesymbolsService],
+  providers: [TvshowService,RemovesymbolsService,GenreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
