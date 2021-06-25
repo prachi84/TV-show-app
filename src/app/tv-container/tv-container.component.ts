@@ -29,8 +29,8 @@ export class TVContainerComponent implements OnInit {
  ngOnInit(): void {
    for (let i = 0; i < 10; i++) {
     this.tvshowservice.getTVContainer('girls').
-    subscribe (data => this.current[i] = data[i])
-   }
+    subscribe (data => this.current[i] = data[i]);
+   };
  }
 
 }

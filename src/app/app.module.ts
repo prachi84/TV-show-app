@@ -16,13 +16,16 @@ import{MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TvSearchComponent } from './tv-search/tv-search.component';
 import { DramaGenreComponent } from './drama-genre/drama-genre.component';
+import {RemovesymbolsService} from './removesymbols.service';
+import {specialPipe} from './removesymbols.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TVContainerComponent,
     TvSearchComponent,
-    DramaGenreComponent
+    DramaGenreComponent,
+    specialPipe
   ],
   imports: [
     BrowserModule,
@@ -36,9 +39,9 @@ import { DramaGenreComponent } from './drama-genre/drama-genre.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [TvshowService],
+  providers: [TvshowService,RemovesymbolsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

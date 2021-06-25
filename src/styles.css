@@ -56,3 +56,9 @@ h2 {
     font-family: "Quicksand", sans-serif;
     padding-left: 12px;
 }
+.showcard{
+    background-color: #333333;
+    font-size: 100%;
+    color: #FFFFFF;
+    word-wrap: break-word;
+}
