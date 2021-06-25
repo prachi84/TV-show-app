@@ -18,10 +18,10 @@ export class TvshowService {
         map(data => this.transformToItvshow(data))
       )
       }
-      private transformToItvshow(data:Itvshowdata[]):Itvshow[] {
-          var result : Itvshow[] = []
-          for (let i=0; i<data.length; i++){
-          const myData = data[i];
+      private transformToItvshow(data:Itvshowdata[]):Itvshow[] {   
+      var result : Itvshow[] = []
+        for (let i=0; i<data.length; i++){
+            const myData = data[i];
             result[i] = {
               show_name:myData.show.name,
               genres:myData.show.genres,
@@ -36,8 +36,8 @@ export class TvshowService {
               summary:myData.show.summary,
               type:myData.show.type,
               status:myData.show.status
-            } 
+            };
           }
-        return result;
+          return result;
         }
-      }
+        }
