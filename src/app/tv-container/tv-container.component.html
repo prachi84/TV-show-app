@@ -1,134 +1,20 @@
 <div class="container-fluid">
-<div *ngIf="current">
-  <h2>Results</h2>
-  <mat-card class="showcard">
-  <div class="show-content">
-    <img [src]='current[0].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[0].show_name}}</div>
-    <div class="show-info">Genres: {{current[0].genres}}</div>
-    <div class="show-info"> Runtime: {{current[0].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[0].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[0]. premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[0].summary | specialPipe}}
-    </div>
-  </div>
-</mat-card>
-<mat-card class="showcard">
-  <div class="show-content">
-    <img [src]='current[1].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[1].show_name}}</div>
-    <div class="show-info">Genres: {{current[1].genres}}</div>
-    <div class="show-info"> Runtime: {{current[1].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[1].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[1].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[1].summary| specialPipe}}
-    </div>
-  </div> 
-</mat-card>
-<mat-card class="showcard">
-    <div class="show-content">
-      <img [src]='current[2].image_original' style="float: left; margin-right: 15px;" />
-      <div class="show-name">{{current[2].show_name}}</div>
-      <div class="show-info">Genres: {{current[2].genres}}</div>
-      <div class="show-info"> Runtime: {{current[2].runtime}} minutes </div>
-      <div class="show-info"> Language: {{current[2].language}}</div>
-      <div class="show-info"> Premiere Date : {{current[2].premiered | date:'fullDate'}}</div><br/>
-       <div class="show-info">
-        {{current[2].summary| specialPipe}}
+  <div *ngIf="current">
+    <h2> Search Results</h2>
+  
+    <mat-card class="showcard">
+      <div class="show-content" *ngFor="let item of current">
+        <img [src]='item.image_original' style="float: left; margin-right: 15px;" />
+        <div class="show-name">{{item.show_name}}</div>
+        <div class="show-info">Genres: {{item.genres}}</div>
+        <div class="show-info"> Runtime: {{item.runtime}} minutes </div>
+        <div class="show-info"> Language: {{item.language}}</div>
+        <div class="show-info"> Premiere Date : {{item. premiered | date:'fullDate'}}</div><br/>
+         <div class="show-info">
+          {{item.summary| specialPipe}}
+        </div>
       </div>
+    </mat-card>
+  
+  </div> 
   </div>
- </mat-card>
- <mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[3].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[3].show_name}}</div>
-    <div class="show-info">Genres: {{current[3].genres}}</div>
-    <div class="show-info"> Runtime: {{current[3].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[3].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[3].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[3].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-<mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[4].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[4].show_name}}</div>
-    <div class="show-info">Genres: {{current[4].genres}}</div>
-    <div class="show-info"> Runtime: {{current[4].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[4].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[4].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[4].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-<mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[5].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[5].show_name}}</div>
-    <div class="show-info">Genres: {{current[5].genres}}</div>
-    <div class="show-info"> Runtime: {{current[5].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[5].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[5].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[5].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-<mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[6].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[6].show_name}}</div>
-    <div class="show-info">Genres: {{current[6].genres}}</div>
-    <div class="show-info"> Runtime: {{current[6].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[6].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[6].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[6].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-<mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[7].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[7].show_name}}</div>
-    <div class="show-info">Genres: {{current[7].genres}}</div>
-    <div class="show-info"> Runtime: {{current[7].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[7].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[7].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[7].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-<mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[8].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[8].show_name}}</div>
-    <div class="show-info">Genres: {{current[8].genres}}</div>
-    <div class="show-info"> Runtime: {{current[8].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[8].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[8].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[8].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-<mat-card class="showcard"> 
-  <div class="show-content">
-    <img [src]='current[9].image_original' style="float: left; margin-right: 15px;" />
-    <div class="show-name">{{current[9].show_name}}</div>
-    <div class="show-info">Genres: {{current[9].genres}}</div>
-    <div class="show-info"> Runtime: {{current[9].runtime}} minutes </div>
-    <div class="show-info"> Language: {{current[9].language}}</div>
-    <div class="show-info"> Premiere Date : {{current[9].premiered | date:'fullDate'}}</div><br/>
-     <div class="show-info">
-      {{current[9].summary| specialPipe}}
-    </div>
-</div>
-</mat-card>
-</div>
