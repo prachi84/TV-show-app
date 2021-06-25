@@ -16,6 +16,7 @@ import{MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TvSearchComponent } from './tv-search/tv-search.component';
 import { DramaGenreComponent } from './drama-genre/drama-genre.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DramaGenreComponent } from './drama-genre/drama-genre.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ],
   providers: [TvshowService],
   bootstrap: [AppComponent]
