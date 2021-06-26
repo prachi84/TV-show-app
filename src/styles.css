@@ -65,4 +65,9 @@ margin-left: auto;
   
   .emulated-flex-gap > * {
     margin: var(--gap) 0 0 var(--gap);
+    margin-bottom: 10%;
   }
+
+ .row {
+    margin-bottom: 10%;
+ } 
