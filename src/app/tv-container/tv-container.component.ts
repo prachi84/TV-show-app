@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Itvshow } from '../itvshow';
 import { TvshowService } from '../tvshow.service';
 
@@ -8,7 +8,7 @@ import { TvshowService } from '../tvshow.service';
   styleUrls: ['./tv-container.component.css']
 })
 export class TVContainerComponent implements OnInit {
-  current : Itvshow[] =[ {
+  @Input() current : Itvshow[] =[ {
     show_name: '',
     genres: [],
     language: '',
@@ -25,13 +25,9 @@ export class TVContainerComponent implements OnInit {
  }
 ]
 
- constructor(private tvshowservice:TvshowService) { }
+ constructor() { }
  ngOnInit(): void {
-   for (let i = 0; i < 10; i++) {
-    this.tvshowservice.getTVContainer('girls').
-    subscribe (data => this.current[i] = data[i]);
+   
    };
  }
-
-}
 /*created one more variable *//*I have created previous variable to add more components */

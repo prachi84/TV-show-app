@@ -10,7 +10,7 @@ import {map} from 'rxjs/operators';
 })
 export class TvshowService {
   constructor(private httpClient: HttpClient) {}
-  getTVContainer(show_name: string) {
+  getTVContainer(show_name:string) {
     return this.httpClient
       .get<Itvshowdata[]>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`
       )

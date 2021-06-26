@@ -10,8 +10,10 @@
   <mat-toolbar color="primary"> 
     TV Show App
   </mat-toolbar>
-  <div class="search"><app-tv-search></app-tv-search></div>
+  <div class="search">
+    <app-tv-search (searchEvent)="doSearch($event)"></app-tv-search>
+  </div>
    
-   <app-tv-container></app-tv-container>
+   <app-tv-container [current]="currentTv"></app-tv-container>
  
 </div>
