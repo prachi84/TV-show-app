@@ -1,20 +1,17 @@
 <div class="container-fluid">
   <div *ngIf="current">
-    <h2> Search Results</h2>
-  
-    <mat-card class="showcard">
-      <div class="show-content" *ngFor="let item of current">
-        <img [src]='item.image_original' style="float: left; margin-right: 15px;" />
+<h1>Shows</h1>
+   <div class="row">
+    <div class="emulated-flex-gap" fxLayout="row"  >
+    <div class="show-content" *ngFor="let item of current">
+        <img [src]='item.image_original' />
         <div class="show-name">{{item.show_name}}</div>
         <div class="show-info">Genres: {{item.genres}}</div>
         <div class="show-info"> Runtime: {{item.runtime}} minutes </div>
         <div class="show-info"> Language: {{item.language}}</div>
-        <div class="show-info"> Premiere Date : {{item. premiered | date:'fullDate'}}</div><br/>
-         <div class="show-info">
-          {{item.summary| specialPipe}}
-        </div>
-      </div>
-    </mat-card>
-  
-  </div> 
+        <div class="show-info"> Premiere Date : {{item. premiered | date:'fullDate'}}</div>
   </div>
+  </div>
+</div>
+</div> 
+</div>
