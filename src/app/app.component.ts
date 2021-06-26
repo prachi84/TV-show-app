@@ -30,10 +30,10 @@ export class AppComponent {
   doSearch(searchValue:string){
     const userInput = searchValue;
     for (let i = 0; i < 10; i++)
-    { this.tvshowservice.getTVContainer(
+    {this.tvshowservice.getTVContainer(
       userInput
-    ).subscribe(data => this.currentTv[i] = data[i])
-  }
+    ).subscribe(data => this.currentTv[i] = data[i]);
+  };
 }
 
 }
