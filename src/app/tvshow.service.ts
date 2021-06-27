@@ -17,27 +17,45 @@ export class TvshowService {
       .pipe(
         map(data => this.transformToItvshow(data))
       )
-      }
-      private transformToItvshow(data:Itvshowdata[]):Itvshow[] {   
-      var result : Itvshow[] = []
-        for (let i=0; i<data.length; i++){
-            const myData = data[i];
-            result[i] = {
-              show_name:myData.show.name,
-              genres:myData.show.genres,
-              language:myData.show.language,
-              runtime:myData.show.runtime,
-              premiered:myData.show.premiered,
-              schedule_time:myData.show.schedule.time,
-              rating_average:myData.show.rating.average,
-              network_name:myData.show.network==null?"":myData.show.network.name,
-              network_country_name:myData.show.network==null?"":myData.show.network.country.name,
-              image_original:myData.show.image==null?"":myData.show.image.medium,
-              summary:myData.show.summary,
-              type:myData.show.type,
-              status:myData.show.status
-            };
-          }
-          return result;
+  }
+  private transformToItvshow(data:Itvshowdata[]):Itvshow[] {   
+    var result : Itvshow[] = []
+    for (let i=0; i<data.length; i++){
+      const myData = data[i];
+      result[i] = {
+        show_name:myData.show.name,
+        genres:myData.show.genres,
+        language:myData.show.language,
+        runtime:myData.show.runtime,
+        premiered:myData.show.premiered,
+        schedule_time:myData.show.schedule.time,
+        rating_average:myData.show.rating.average,
+        network_name:myData.show.network==null?"":myData.show.network.name,
+        network_country_name:myData.show.network==null?"":myData.show.network.country.name,
+        image_original: imageStrategy(myData.show.image),
+        summary:myData.show.summary,
+        type:myData.show.type,
+        status:myData.show.status
+      };
+    }
+return result;
         }
         }
+
+         const imageStrategy = (resultData: {
+          medium: string;
+      }) => {
+           if(resultData===null){
+             return "./assets/noimage.png"
+           }
+           else {
+             return resultData.medium
+           }
+        }
+
+
+
+
+
+
+    
