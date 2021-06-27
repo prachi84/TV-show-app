@@ -20,6 +20,7 @@ import {RemovesymbolsService} from './removesymbols.service';
 import {specialPipe} from './removesymbols.service';
 import {GenreService} from './genre.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { ShowdetailNewpageComponent } from './showdetail-newpage/showdetail-newpage.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     TVContainerComponent,
     TvSearchComponent,
     DramaGenreComponent,
-    specialPipe
+    specialPipe,
+    ShowdetailNewpageComponent
   ],
   imports: [
     BrowserModule,

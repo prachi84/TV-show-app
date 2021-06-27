@@ -1,6 +1,10 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, NgModule} from '@angular/core';
 import { Itvshow } from '../itvshow';
 import { TvshowService } from '../tvshow.service';
+import {RouterModule, Router, Routes} from '@angular/router';  //FANG
+
+
+export class AppRoutingModule { }
 
 @Component({
   selector: 'app-tv-container',
@@ -24,9 +28,10 @@ export class TVContainerComponent implements OnInit {
     status: '',
  }
 ]
-
+ 
  constructor() { }
- ngOnInit(): void {
+
+ ngOnInit():void {
    
    };
  }
