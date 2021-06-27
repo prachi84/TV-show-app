@@ -2,14 +2,18 @@
   <div *ngIf="current">
 <h1>Shows Details</h1>
 
-<img [src]='current.image_original' style="float: left; padding-right: 50px;"/>
+<img [src]='current.image_original' width="600" height="700" style="float: left; padding-right: 50px;"/>
 <div class="show-name">{{current.show_name}}</div>
+<br /> 
+<div class="show-info"> Summary: {{current.summary}}</div>
 <br /> 
 <div class="show-info">Genres: 111 {{current.genres}}</div>
 <div class="show-info"> Runtime: {{current.runtime}} minutes </div>
 <div class="show-info"> Language: {{current.language}}</div>
-<br /> 
-<div class="show-info"> Summary: {{current.summary}}</div>
 <div class="show-info"> Premiere Date : {{current.premiered | date:'fullDate'}}</div>
+<div class="show-info"> Type : {{current.type}}</div>
+<div class="show-info"> Status : {{current.status}}</div>
+<div class="show-info"> Network_name : {{current.network_name}}</div>
+<div class="show-info"> Network_country_name : {{current.network_country_name}}</div>
 </div> 
 </div>
