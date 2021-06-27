@@ -5,9 +5,9 @@
 <img [src]='current.image_original' width="600" height="700" style="float: left; padding-right: 50px;"/>
 <div class="show-name">{{current.show_name}}</div>
 <br /> 
-<div class="show-info"> Summary: {{current.summary}}</div>
+<div class="show-info"> Summary: {{current.summary | specialPipe}}</div>
 <br /> 
-<div class="show-info">Genres: 111 {{current.genres}}</div>
+<div class="show-info">Genres: {{current.genres}}</div>
 <div class="show-info"> Runtime: {{current.runtime}} minutes </div>
 <div class="show-info"> Language: {{current.language}}</div>
 <div class="show-info"> Premiere Date : {{current.premiered | date:'fullDate'}}</div>
