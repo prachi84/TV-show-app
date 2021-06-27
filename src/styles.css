@@ -51,10 +51,11 @@ margin-left: auto;
     border-radius: 10px;
 }
  h1 {
-    color:cadetblue;
+    color:#ffaa00;
+    font-family: "Quicksand", sans-serif;
     float:auto;
-
 }
+
 .emulated-flex-gap {
     --gap: 160px;
     display: inline-flex;
@@ -71,3 +72,18 @@ margin-left: auto;
  .row {
     margin-bottom: 10%;
  } 
+
+.mat-focused .mat-form-field-label {
+    color: #ffaa00 !important;
+   }
+  
+.mat-form-field-ripple {
+   background-color:#ffaa00 !important;;
+  }
+  mat-hint {
+    color: #5e5e5e !important;
+ }
+ .mat-toolbar {
+     height: 75px;
+
+ }
