@@ -46,7 +46,7 @@ return result;
           medium: string;
       }) => {
            if(resultData===null){
-             return "./assets/noimage.png"
+             return "./assets/img/noimage.png"
            }
            else {
              return resultData.medium
