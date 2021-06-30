@@ -27,6 +27,15 @@ export class AppComponent {
   ]
   constructor(private tvshowservice:TvshowService){}
   
+  ngOnInit():void {
+    const defaultView = "Drama";
+    for (let i = 0; i < 4; i++)
+    {this.tvshowservice.getTVContainer(
+      defaultView
+    ).subscribe(data => this.currentTv[i] = data[i]);
+    }
+  };
+  
   doSearch(searchValue:string){
     const userInput = searchValue;
     for (let i = 0; i < 10; i++)
