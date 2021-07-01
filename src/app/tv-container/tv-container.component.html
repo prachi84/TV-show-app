@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div *ngIf="current">
 <h1>Shows</h1>
-   <div class="row">
+ <div class="row">
     <div class="emulated-flex-gap" fxLayout="row">
     <div class="show-content" *ngFor="let item of current">
                                                                         
-        <a [routerLink] = "['showdetail-newpage']" [queryParams]="item" class="nav-link" target="_blank">
+        <a [routerLink] = "['showdetail-newpage']" [queryParams]="item" class="nav-link">
           <img [src]='item.image_original'/>
         </a>
         <div style="color:#fff600;"class="show-name">{{item.show_name}}</div>
@@ -19,6 +19,3 @@
 </div> 
 </div>
 
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
