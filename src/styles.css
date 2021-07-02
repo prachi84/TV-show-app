@@ -65,16 +65,16 @@ h1.show-detail {
     float:auto;
 }
 .emulated-flex-gap {
-    --gap: 160px;
+    --gap: 120px;
     display: inline-flex;
     flex-wrap: wrap;
     margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
-    width: calc(80% + var(--gap));
+    width: calc(100% + var(--gap));
   }
   
   .emulated-flex-gap > * {
     margin: var(--gap) 0 0 var(--gap);
-    margin-bottom: 10%;
+    width: 335px;
   }
 
  .row {
