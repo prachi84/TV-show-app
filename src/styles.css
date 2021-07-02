@@ -44,6 +44,10 @@ h1.show-name {
     margin: 15px;
     height: auto;
 }
+.tvshow-detail {
+    margin: 15px;
+    height: 710px;
+}
 .search {
     position:absolute;
     right:5%;
@@ -74,7 +78,7 @@ h1.show-detail {
   
   .emulated-flex-gap > * {
     margin: var(--gap) 0 0 var(--gap);
-    width: 335px;
+    width: 345px;
   }
 
  .row {
