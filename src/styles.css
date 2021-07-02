@@ -30,7 +30,9 @@ width: 80%;
 margin-right: auto;
 margin-left: auto;
 }
-.show-name { 
+h1.show-name { 
+    color:#ffaa00;
+    font-family: "Quicksand", sans-serif;
     font-size: 2em;
     line-height: normal;
 }
@@ -40,7 +42,7 @@ margin-left: auto;
 }
 .show-content {
     margin: 15px;
-    height: 300px;
+    height: auto;
 }
 .search {
     position:absolute;
@@ -52,10 +54,16 @@ margin-left: auto;
 }
  h1 {
     color:#ffaa00;
+    font-family: "Quicksand", sans-serif !important;
+    float:auto;
+    
+}
+h1.show-detail {
+    color:#ffaa00;
     font-family: "Quicksand", sans-serif;
+    font-size: 3em;
     float:auto;
 }
-
 .emulated-flex-gap {
     --gap: 160px;
     display: inline-flex;

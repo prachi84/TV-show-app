@@ -2,18 +2,20 @@
   <div *ngIf="current">
 <h1>Shows Details</h1>
 
+<div class="show-content" style="float: right">
 <img [src]='current.image_original' width="600" height="700" style="float: left; padding-right: 50px; "/>
-<h1 style="color:#6495ed;">{{current.show_name}}</h1>
+<h1 class="show-detail">{{current.show_name}}</h1>
 <br /> 
 <div class="show-info"> Summary: {{current.summary | specialPipe}}</div>
 <br /> 
 <div class="show-info">Genres: {{current.genres}}</div>
-<div class="show-info"> Runtime: {{current.runtime}} minutes </div>
-<div class="show-info"> Language: {{current.language}}</div>
-<div class="show-info"> Premiere Date : {{current.premiered | date:'fullDate'}}</div>
-<div class="show-info"> Type : {{current.type}}</div>
-<div class="show-info"> Status : {{current.status}}</div>
-<div class="show-info"> Network_name : {{current.network_name}}</div>
-<div class="show-info"> Network_country_name : {{current.network_country_name}}</div>
+<div class="show-info">Runtime: {{current.runtime}} minutes </div>
+<div class="show-info">Language: {{current.language}}</div>
+<div class="show-info">Premiere Date: {{current.premiered | date:'fullDate'}}</div>
+<div class="show-info">Type: {{current.type}}</div>
+<div class="show-info">Status: {{current.status}}</div>
+<div class="show-info">Network Name: {{current.network_name}}</div>
+<div class="show-info">Network Country: {{current.network_country_name}}</div>
 </div> 
+</div>
 </div>
