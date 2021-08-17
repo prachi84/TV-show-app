@@ -7,7 +7,7 @@ import { Itvshowdata } from '../interfaces/itvshowdata';
 @Injectable({
   providedIn: 'root'
 })
-export class GenreService {
+export class GetAllShows {
   constructor(private httpClient: HttpClient) {}
   getGenreContainer() {
     return this.httpClient

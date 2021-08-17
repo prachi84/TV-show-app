@@ -17,9 +17,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TvSearchComponent } from './tv-search/tv-search.component';
 import {RemovesymbolsService} from './services/removesymbols.service';
 import {specialPipe} from './services/removesymbols.service';
-import {GenreService} from './services/genre.service';
+import {GetAllShows} from './services/getallshows.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { ShowdetailNewpageComponent } from './showdetail-newpage/showdetail-newpage.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ShowdetailNewpageComponent } from './showdetail-newpage/showdetail-newp
     TVContainerComponent,
     TvSearchComponent,
     specialPipe,
-    ShowdetailNewpageComponent
+    ShowdetailNewpageComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,7 @@ import { ShowdetailNewpageComponent } from './showdetail-newpage/showdetail-newp
     ReactiveFormsModule,
     FlexLayoutModule
   ],
-  providers: [TvshowService,RemovesymbolsService,GenreService],
+  providers: [TvshowService,RemovesymbolsService,GetAllShows],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
