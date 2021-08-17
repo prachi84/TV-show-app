@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Itvshow} from './itvshow';
+import {Itvshow} from '../interfaces/itvshow';
 import {map} from 'rxjs/operators';
-import { Itvshowdata } from './itvshowdata';
+import { Itvshowdata } from '../interfaces/itvshowdata';
 
 @Injectable({
   providedIn: 'root'

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TVContainerComponent } from './tv-container/tv-container.component';
 import {HttpClientModule} from '@angular/common/http';
-import { TvshowService } from './tvshow.service';
+import { TvshowService } from './services/tvshow.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -15,10 +15,9 @@ import{MatFormFieldModule} from '@angular/material/form-field';
 import{MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TvSearchComponent } from './tv-search/tv-search.component';
-import { DramaGenreComponent } from './drama-genre/drama-genre.component';
-import {RemovesymbolsService} from './removesymbols.service';
-import {specialPipe} from './removesymbols.service';
-import {GenreService} from './genre.service';
+import {RemovesymbolsService} from './services/removesymbols.service';
+import {specialPipe} from './services/removesymbols.service';
+import {GenreService} from './services/genre.service';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { ShowdetailNewpageComponent } from './showdetail-newpage/showdetail-newpage.component';
 
@@ -27,7 +26,6 @@ import { ShowdetailNewpageComponent } from './showdetail-newpage/showdetail-newp
     AppComponent,
     TVContainerComponent,
     TvSearchComponent,
-    DramaGenreComponent,
     specialPipe,
     ShowdetailNewpageComponent
   ],

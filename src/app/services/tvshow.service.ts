@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, ɵsetCurrentInjector } from '@angular/core';
-import {Itvshowdata} from './itvshowdata';
+import {Itvshowdata} from '../interfaces/itvshowdata';
 import {environment} from 'src/environments/environment';
-import {Itvshow} from './itvshow';
+import {Itvshow} from '../interfaces/itvshow';
 import {map} from 'rxjs/operators';
 
 @Injectable({
@@ -10,6 +10,7 @@ import {map} from 'rxjs/operators';
 })
 export class TvshowService {
   constructor(private httpClient: HttpClient) {}
+  
   getTVContainer(show_name:string) {
     return this.httpClient
       .get<Itvshowdata[]>(`http://api.tvmaze.com/search/shows?q=${show_name}&appid=${environment.appId}`

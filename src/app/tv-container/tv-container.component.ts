@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, NgModule} from '@angular/core';
-import { Itvshow } from '../itvshow';
-import { TvshowService } from '../tvshow.service';
+import { Itvshow } from '../interfaces/itvshow';
+import { TvshowService } from '../services/tvshow.service';
 import {RouterModule, Router, Routes} from '@angular/router';  //FANG
 
 
