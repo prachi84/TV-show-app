@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetAllShows } from '../services/getallshows.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  
+
+  constructor(public AllShows: GetAllShows) { }
 
   ngOnInit(): void {
   }
